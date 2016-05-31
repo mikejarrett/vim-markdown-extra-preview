@@ -54,7 +54,7 @@ endif
 
 let s:script_dir = expand("<sfile>:p:h")
 
-function! PreviewME(refresh)
+function! PreviewME2(refresh)
 python << PYTHON
 
 from os import path, makedirs, linesep
@@ -268,8 +268,8 @@ display(template, file_ext, context)
 PYTHON
 endfunction
 
-command! Me :call PreviewME('')
-command! Mer :call PreviewME('True')
+command! Me2 :call PreviewME2('')
+command! Mer2 :call PreviewME2('True')
 
-command! Me3 :call PreviewME3('')
-command! Mer3 :call PreviewME3('True')
+command! Me :call PreviewME3('')
+command! Mer :call PreviewME3('True')

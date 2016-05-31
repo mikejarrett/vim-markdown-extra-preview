@@ -6,27 +6,28 @@ This plugin passes the current buffer through Python-Markdown (with the
 browser. 
 
 The Python-Markdown library is included. However, Vim must be compiled with 
-Python support (`+python`) and the matching version of Python must be 
-installed on the system. The plugin checks this when called and will fail
+Python support (`+python` or `python3`) and the matching version of Python must
+be installed on the system. The plugin checks this when called and will fail
 with an error message if Python is not available.
 
 ## Usage
 
-There are two commands available:
+There are four commands available, two for Python3 (`:Me` and `:Mer`) and two
+for Python2 (`:Me2` and `:Mer2`):
 
-* Run the command `:Me` to preview the current buffer. This is the normal
-  mode, converts the markdown buffer to a html file and open it in a new browser 
-  window or tab with the result.
+* Run the command `:Me` or `:Me2` to preview the current buffer. This is the
+  normal mode, converts the markdown buffer to a html file and open it in a newr
+  browser window or tab with the result.
 
-* Run the command `:Mer` to refresh the current buffer. The intention of this
-  mode is making it work together with a browser plugin that reload the page
-  when it changes. Then, this mode don't open a new browser tab or window, only
-  save the html file to the disk. With a plugin like the 
+* Run the command `:Mer` or `:Mer2` to refresh the current buffer. The intention
+  of this mode is making it work together with a browser plugin that reload the
+  page when it changes. Then, this mode don't open a new browser tab or window,
+  only save the html file to the disk. With a plugin like the
   [Firefox's  Auto Reload][far] the browser tab it's automatically reloaded in
   order to view the changes.
 
   [far]: https://addons.mozilla.org/en-US/firefox/addon/auto-reload/
-  
+
 
 ## Options
 
